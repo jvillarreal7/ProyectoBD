@@ -1,0 +1,13 @@
+/*Requerimiento 1*/
+SELECT * FROM TRANSACCIONES_TIPO;
+SELECT SUM(Monto) AS Total FROM Transacciones_Tipo;
+
+/*Requerimiento 2*/
+SELECT * FROM TRANSACCIONES_FECHAS;
+
+/*Requerimiento 3*/
+SELECT * FROM TRANSACCIONES_FECHAS_TIPO;
+
+/*Requerimiento 4*/
+SELECT * FROM CONCENTRADO_CLIENTE;
+SELECT SUM(Monto) AS Total FROM Transacciones WHERE IDCLIENTE = 1;
