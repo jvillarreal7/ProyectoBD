@@ -19,11 +19,11 @@ AND TO_DATE ('2016/06/01', 'yyyy/mm/dd');
 --  DDL for View TRANSACCIONES_FECHAS_TIPO
 --------------------------------------------------------
 
-  CREATE OR REPLACE FORCE VIEW "ADMINLOL"."TRANSACCIONES_FECHAS_TIPO" ("IDTRANSACCION", "IDCUENTA", "TIPOTRANSACCION", "MONTO", "FECHA") AS 
+  CREATE OR REPLACE VIEW TRANSACCIONES_FECHAS_TIPO AS
   SELECT IDTRANSACCION, IDCUENTA, TIPOTRANSACCION, MONTO, FECHA
   FROM TRANSACCIONES
   WHERE FECHA BETWEEN TO_DATE ('2016/05/29', 'yyyy/mm/dd')
-AND TO_DATE ('2016/06/01', 'yyyy/mm/dd');
+AND TO_DATE ('2016/06/01', 'yyyy/mm/dd') AND TIPOTRANSACCION = 'DEPOSITO';
 --------------------------------------------------------
 --  DDL for View TRANSACCIONES_TIPO
 --------------------------------------------------------
